@@ -14,16 +14,18 @@ class Produto{
 }
 
 class produtoDestaque extends produto{
-    constructor(nome, datadeCadastro, descricao,preco,imagemDestaque){
+    constructor(nome, datadeCadastro, descricao, preco, produto_destaque){
         super(nome,datadeCadastro,descricao,preco)
         this.produto_destaque = produto_destaque;
     }     
     }
     mostrar_produto_destaque(){
-        return
+        return `
         <h1 class "vermelho">$ {this.nome}</h1>
         <div>${this.datadeCadastro}</div>
         <p>${this.descricao}</p>
+        `
+        
 
         //return this.nome + this.datadeCadastro + this.descricao + this.preco + this.produto_destaque;
     }
